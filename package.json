@@ -1,4 +1,5 @@
 {
+  "name": "hscore-mobile-storybook",  
   "dependencies": {
     "@expo/metro-runtime": "~3.2.3",
     "@expo/vector-icons": "^14.0.4",
@@ -40,6 +41,5 @@
   },
   "version": "1.0.0",
   "private": true,
-  "name": "storybook-tutorial-template",
   "packageManager": "yarn@4.5.0"
 }

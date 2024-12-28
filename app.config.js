@@ -13,8 +13,8 @@ export default ({ config }) => {
   // Log the final config for verification
   const finalConfig = {
     ...config,
-    name: "Storybook Tutorial Template",
-    slug: "storybook-tutorial-template",
+    name: "hscore-mobile-storybook",       // Change this to your new project name
+    slug: "hscore-mobile-storybook",       // Change this to your new project slug
     extra: {
       ...config.extra,
       storybookEnabled: process.env.STORYBOOK_ENABLED || false,

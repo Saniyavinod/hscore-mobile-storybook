@@ -17,7 +17,7 @@ const preview = {
         style={{
           flex: 1,
           backgroundColor:
-            parameters.noBackground === true ? undefined : "#26c6da",
+            parameters.noBackground === true ? undefined : "white",
           padding: 8,
         }}
       >
