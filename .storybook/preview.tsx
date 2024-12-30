@@ -1,7 +1,9 @@
+import React from "react";
 import { View } from "react-native";
+import { Preview } from '@storybook/react';
 
-/** @type{import("@storybook/react").Preview} */
-const preview = {
+// Define the preview object with type annotations
+const preview: Preview = {
   parameters: {
     controls: {
       matchers: {
@@ -16,8 +18,7 @@ const preview = {
       <View
         style={{
           flex: 1,
-          backgroundColor:
-            parameters.noBackground === true ? undefined : "white",
+          backgroundColor: parameters.noBackground === true ? undefined : "white",
           padding: 8,
         }}
       >

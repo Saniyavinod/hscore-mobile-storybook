@@ -15,6 +15,7 @@ export default ({ config }) => {
     ...config,
     name: "hscore-mobile-storybook",       // Change this to your new project name
     slug: "hscore-mobile-storybook",       // Change this to your new project slug
+    newArchEnabled: true,                  // Enable New Architecture
     extra: {
       ...config.extra,
       storybookEnabled: process.env.STORYBOOK_ENABLED || false,

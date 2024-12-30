@@ -1,7 +1,11 @@
-import React, { useState } from 'react';
-import { ActivityIndicator, TouchableOpacity, Text, View, StyleSheet } from 'react-native';
+import React, { useState } from "react";
+import { ActivityIndicator, TouchableOpacity, Text, View, StyleSheet } from "react-native";
 
-export const LoadingButton = ({ buttonText = 'Login' }) => {
+interface UIButtonProps {
+  buttonText?: string;
+}
+
+export const UIButton: React.FC<UIButtonProps> = ({ buttonText = "Login" }) => {
   const [loading, setLoading] = useState(false);
 
   const handlePress = () => {
@@ -28,30 +32,30 @@ export const LoadingButton = ({ buttonText = 'Login' }) => {
 
 const styles = StyleSheet.create({
   buttonContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
     padding: 10,
   },
   button: {
-    backgroundColor:'#007AFF',
+    backgroundColor: "#007AFF",
     paddingVertical: 12,
     paddingHorizontal: 32,
     borderRadius: 6,
-    alignItems: 'center',
-    width: '100%',
+    alignItems: "center",
+    width: "100%",
   },
   buttonDisabled: {
-    backgroundColor: '#007AFF', 
+    backgroundColor: "#007AFF",
   },
   buttonText: {
-    color: '#ffffff',
+    color: "#ffffff",
     fontSize: 16,
-    fontWeight: '600',
+    fontWeight: "600",
   },
   buttonContent: {
-    flexDirection: 'row', 
-    alignItems: 'center', 
-    justifyContent: 'center', 
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
