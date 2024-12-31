@@ -1,18 +1,19 @@
 import { LogBox, StyleSheet, Text, View } from "react-native";
 import Constants from "expo-constants";
+import React from "react";
 LogBox.ignoreAllLogs();
 
 function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Text>Welcome to the App! Open Storybook to view the button component.</Text>
     </View>
   );
 }
 
 let AppEntryPoint = App;
 
-if (Constants.expoConfig.extra.storybookEnabled === "true") {
+if (Constants.expoConfig?.extra?.storybookEnabled === "true") {
   AppEntryPoint = require("./.storybook").default;
 }
 

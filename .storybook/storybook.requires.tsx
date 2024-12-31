@@ -2,29 +2,29 @@
 
 import { start, updateView } from "@storybook/react-native";
 
-import "@storybook/addon-ondevice-controls/register";
 import "@storybook/addon-ondevice-actions/register";
+import "@storybook/addon-ondevice-controls/register";
 
 const normalizedStories = [
   {
     titlePrefix: "",
-    directory: "./components",
-    files: "**/*.stories.?(ts|tsx|js|jsx)",
+    directory: "./widgets",
+    files: "**/*.stories.@(ts|tsx|js|jsx)",
     importPathMatcher:
-      /^\.(?:(?:^|[\\/]|(?:(?:(?!(?:^|[\\/])\.).)*?)[\\/])(?!\.)(?=.)[^\\/]*?\.stories\.(?:ts|tsx|js|jsx)?)$/,
+      /^\.(?:(?:^|[\\/]|(?:(?:(?!(?:^|[\\/])\.).)*?)[\\/])(?!\.)(?=.)[^\\/]*?\.stories\.(ts|tsx|js|jsx))$/,
 
     req: require.context(
-      "../components",
+      "../widgets",
       true,
-      /^\.(?:(?:^|[\\/]|(?:(?:(?!(?:^|[\\/])\.).)*?)[\\/])(?!\.)(?=.)[^\\/]*?\.stories\.(?:ts|tsx|js|jsx)?)$/
+      /^\.(?:(?:^|[\\/]|(?:(?:(?!(?:^|[\\/])\.).)*?)[\\/])(?!\.)(?=.)[^\\/]*?\.stories\.(ts|tsx|js|jsx))$/
     ),
   },
 ];
 
 const annotations = [
   require("./preview"),
-  require("@storybook/react-native/dist/preview"),
-  require("@storybook/addon-actions/preview"),
+  require("@storybook/react-native/preview"),
+  require("@storybook/addon-ondevice-actions/preview"),
 ];
 
 global.STORIES = normalizedStories;

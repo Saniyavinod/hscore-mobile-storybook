@@ -3,10 +3,11 @@
     "moduleResolution": "node",
     "allowImportingTsExtensions": true,
     "baseUrl": ".",
-    "types": ["node"], // Add this line
+    "types": ["node"],  // Remove "@types/expo" here
     "paths": {
       "*": ["types/*"]
-    }
+    },
+    "jsx": "react"
   },
   "extends": "expo/tsconfig.base",
   "include": [

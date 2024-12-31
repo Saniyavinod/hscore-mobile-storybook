@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ActivityIndicator, TouchableOpacity, Text, View, StyleSheet } from "react-native";
 
 interface UIButtonProps {
@@ -7,9 +7,17 @@ interface UIButtonProps {
 
 export const UIButton: React.FC<UIButtonProps> = ({ buttonText = "Login" }) => {
   const [loading, setLoading] = useState(false);
+  const [clickCount, setClickCount] = useState(0);
+
+  useEffect(() => {
+    if (clickCount > 0) {
+      console.log(`Button clicked ${clickCount} times`);
+    }
+  }, [clickCount]);
 
   const handlePress = () => {
     setLoading(true);
+    setClickCount(clickCount + 1);
     // Simulate an async action
     setTimeout(() => setLoading(false), 2000);
   };

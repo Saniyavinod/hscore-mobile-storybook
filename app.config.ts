@@ -1,7 +1,7 @@
 // Log the value of STORYBOOK_ENABLED
 console.log("STORYBOOK_ENABLED:", process.env.STORYBOOK_ENABLED);
 
-export default ({ config }) => {
+export default ({ config }: { config: any }) => {
   // Log the initial config to debug
   console.log("Initial Config:", config);
 

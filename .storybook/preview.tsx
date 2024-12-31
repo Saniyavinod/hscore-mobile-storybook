@@ -2,7 +2,6 @@ import React from "react";
 import { View } from "react-native";
 import { Preview } from '@storybook/react';
 
-// Define the preview object with type annotations
 const preview: Preview = {
   parameters: {
     controls: {
@@ -12,7 +11,6 @@ const preview: Preview = {
       },
     },
   },
-
   decorators: [
     (Story, { parameters }) => (
       <View
@@ -22,7 +20,7 @@ const preview: Preview = {
           padding: 8,
         }}
       >
-        <Story />
+          <Story />
       </View>
     ),
   ],

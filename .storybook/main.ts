@@ -1,7 +1,7 @@
-import type { StorybookConfig } from '@storybook/react-native';  // or '@storybook/react'
+import type { StorybookConfig } from '@storybook/react-native';
 
 const config: StorybookConfig = {
-  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+  stories: ['../widgets/**/*.stories.@(ts|tsx|js|jsx)'],  // Adjust the path to include the widgets folder
   addons: [
     '@storybook/addon-essentials',
     '@storybook/addon-ondevice-actions',
